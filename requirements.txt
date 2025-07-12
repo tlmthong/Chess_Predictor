@@ -8,5 +8,5 @@ lightgbm
 matplotlib
 plotly
 requests
-pickle5
+pickle
 gunicorn
