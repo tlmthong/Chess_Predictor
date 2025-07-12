@@ -10,3 +10,4 @@ seaborn
 tensorflow
 scikeras
 plotly
+gunicorn
