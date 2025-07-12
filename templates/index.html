@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <title>Chess outcome</title>
+</head>
+
+<body>
+    <div>
+        <input type="text" id="username_white" placeholder="White player username" />
+        <input type="text" id="username_black" placeholder="Black player username" />
+    </div>
+    <div>
+        <input type="text" id="eco" placeholder="ECO code" />
+    </div>
+    <div class="mode-toggle">
+        <label class="toggle-option">
+            <input type="radio" name="mode" value="WDL" checked onclick="handleModeChange(this)">
+            <span class="custom-radio"></span>
+            Predict Win/Draw/Loss
+        </label>
+
+        <label class="toggle-option">
+            <input type="radio" name="mode" value="WL" onclick="handleModeChange(this)">
+            <span class="custom-radio"></span>
+            Predict Win/Loss
+        </label>
+    </div>
+    </div>
+    <div>
+        <p>Time Control:</p>
+        <input type="number" id="time" placeholder="Time in seconds" />
+        <p>Increment:</p>
+        <input type="number" id="increment" placeholder="Time in seconds" />
+    </div>
+    <div>
+        <p>Number of Games:</p>
+        <input type="number" id = 'num_game' placeholder="Number of games" />
+    <div>
+    <div class="start-toggle">
+        <label class="toggle-option">
+            <input type="radio" name="start" value="white" checked onclick="handleStartChange(this)">
+            <span class="custom-radio"></span>
+            Start with White
+        </label>
+
+        <label class="toggle-option">
+            <input type="radio" name="start" value="black" onclick="handleStartChange(this)">
+            <span class="custom-radio"></span>
+            Start with Black
+        </label>
+    </div>
+    <div>
+        <p>Level of Confident (eg 30% is 0.3)</p>
+        <input type="number" id = "confident"  placeholder="confident">
+    </div>
+    </div>
+        <br>
+        <button id="predictButton">Predict Outcome</button>
+    </div>
+    <div>
+        <p id="result"></p>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+
+</html>
