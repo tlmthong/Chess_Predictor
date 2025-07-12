@@ -1,7 +1,7 @@
 Flask
 numpy
 pandas
-scikit-learn
+scikit-learn == 1.2.2
 imblearn
 xgboost
 lightgbm
