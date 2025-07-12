@@ -7,4 +7,6 @@ xgboost
 lightgbm
 matplotlib
 plotly
+requests
+pickle
 gunicorn
